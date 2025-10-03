@@ -3,8 +3,7 @@
 import type React from "react"
 
 import { useState } from "react"
-import { Navbar } from "@/components/navigation"
-import { Footer } from "@/components/footer"
+import Navbar  from "@/components/Navbar"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
