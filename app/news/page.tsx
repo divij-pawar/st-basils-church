@@ -1,3 +1,4 @@
+import Navbar from "@/components/Navbar"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -7,43 +8,7 @@ import Link from "next/link"
 export default function NewsPage() {
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="border-b border-border bg-card">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <Link href="/" className="flex items-center gap-3">
-              <Cross className="h-8 w-8 text-accent" />
-              <div>
-                <h1 className="text-2xl font-bold text-foreground">Saint Basil Seminary</h1>
-                <p className="text-sm text-muted-foreground">Orthodox Theological Education</p>
-              </div>
-            </Link>
-            <nav className="hidden md:flex items-center gap-6">
-              <Link href="/" className="text-foreground hover:text-accent transition-colors">
-                Home
-              </Link>
-              <Link href="/about" className="text-foreground hover:text-accent transition-colors">
-                About
-              </Link>
-              <Link href="/programs" className="text-foreground hover:text-accent transition-colors">
-                Programs
-              </Link>
-              <Link href="/events" className="text-foreground hover:text-accent transition-colors">
-                Events
-              </Link>
-              <Link href="/news" className="text-accent font-medium">
-                News
-              </Link>
-              <Link href="/contact" className="text-foreground hover:text-accent transition-colors">
-                Contact
-              </Link>
-              <Button variant="default" size="sm">
-                Donate
-              </Button>
-            </nav>
-          </div>
-        </div>
-      </header>
+      <Navbar />
 
       {/* Hero Section */}
       <section className="py-16 bg-gradient-to-b from-card to-background">
