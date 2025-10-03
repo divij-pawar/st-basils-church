@@ -1,7 +1,8 @@
 import Navbar from "@/components/Navbar"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Cross, BookOpen, Users, Heart } from "lucide-react"
+import { Cross, BookOpen, Users, Heart, Calendar } from "lucide-react"
+import Link from "next/link"
 
 export default function HomePage() {
   return (
@@ -21,76 +22,90 @@ export default function HomePage() {
               traditions of the Eastern Orthodox Church, preparing faithful servants for ministry in the modern world.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="text-lg px-8 shadow-lg">
-                <a href="#academic-programs">Learn About Our Programs</a>
+              <Button size="lg" className="text-lg px-8 shadow-lg" asChild>
+                <Link href="/cursillo">Learn About Our Programs</Link>
               </Button>
               <Button
                 variant="secondary"
                 size="lg"
                 className="text-lg px-8 bg-white/20 backdrop-blur-sm border-white/30 text-white hover:bg-white/30 shadow-lg"
+                asChild
               >
-                <a href="#calendar">Visit Our Campus</a>
+                <Link href="/events">Visit Our Campus</Link>
               </Button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Academic Programs */}
+      {/* Academic Programs - Updated to new content */}
       <section id="academic-programs" className="py-16 stained-glass-mission">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Card className="text-center border-border">
-              <CardHeader>
-                <BookOpen className="h-12 w-12 text-accent mx-auto mb-4" />
-                <CardTitle className="text-foreground">Theological Education</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-muted-foreground">
-                  Comprehensive curriculum rooted in Orthodox theology, patristics, and liturgical studies
-                </CardDescription>
-              </CardContent>
-            </Card>
+            {/* Cursillo Card */}
+            <Link href="/cursillo" passHref>
+              <Card className="text-center border-border hover:bg-accent/10 transition-colors cursor-pointer">
+                <CardHeader>
+                  <Heart className="h-12 w-12 text-accent mx-auto mb-4" />
+                  <CardTitle className="text-foreground">Cursillo</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-muted-foreground">
+                    A three-day spiritual retreat that deepens faith, builds community, and strengthens your relationship
+                    with Christ.
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            </Link>
 
-            <Card className="text-center border-border">
-              <CardHeader>
-                <Cross className="h-12 w-12 text-accent mx-auto mb-4" />
-                <CardTitle className="text-foreground">Spiritual Formation</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-muted-foreground">
-                  Daily liturgical life, prayer, and spiritual direction in the Orthodox tradition
-                </CardDescription>
-              </CardContent>
-            </Card>
+            {/* Events Card */}
+            <Link href="/events" passHref>
+              <Card className="text-center border-border hover:bg-accent/10 transition-colors cursor-pointer">
+                <CardHeader>
+                  <Calendar className="h-12 w-12 text-accent mx-auto mb-4" />
+                  <CardTitle className="text-foreground">Events</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-muted-foreground">
+                    Join us for liturgical celebrations, theological lectures, and community gatherings.
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            </Link>
 
-            <Card className="text-center border-border">
-              <CardHeader>
-                <Users className="h-12 w-12 text-accent mx-auto mb-4" />
-                <CardTitle className="text-foreground">Community Life</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-muted-foreground">
-                  Brotherhood of learning, worship, and service in preparation for ministry
-                </CardDescription>
-              </CardContent>
-            </Card>
+            {/* Prayer Line Card */}
+            <Link href="/prayer" passHref>
+              <Card className="text-center border-border hover:bg-accent/10 transition-colors cursor-pointer">
+                <CardHeader>
+                  <Cross className="h-12 w-12 text-accent mx-auto mb-4" />
+                  <CardTitle className="text-foreground">Prayer Line</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-muted-foreground">
+                    Submit prayer requests for yourself, loved ones, or specific needs to be lifted up in prayer by our
+                    community.
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            </Link>
 
-            <Card className="text-center border-border">
-              <CardHeader>
-                <Heart className="h-12 w-12 text-accent mx-auto mb-4" />
-                <CardTitle className="text-foreground">Pastoral Care</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-muted-foreground">
-                  Training in pastoral ministry, counseling, and serving Orthodox communities
-                </CardDescription>
-              </CardContent>
-            </Card>
+            {/* Team List Card */}
+            <Link href="/team" passHref>
+              <Card className="text-center border-border hover:bg-accent/10 transition-colors cursor-pointer">
+                <CardHeader>
+                  <Users className="h-12 w-12 text-accent mx-auto mb-4" />
+                  <CardTitle className="text-foreground">Team List</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-muted-foreground">
+                    Meet the dedicated team of clergy, faculty, and staff who guide and support our seminary community.
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            </Link>
           </div>
         </div>
       </section>
-
 
       {/* Footer */}
       <footer className="stained-glass-footer text-white py-12">
@@ -110,22 +125,17 @@ export default function HomePage() {
               <h5 className="font-semibold mb-4 drop-shadow-md">Quick Links</h5>
               <ul className="space-y-2 text-white/80">
                 <li>
-                  <a href="#about-us" className="hover:text-accent transition-colors drop-shadow-sm">
+                  <a href="/about-us" className="hover:text-accent transition-colors drop-shadow-sm">
                     About Us
                   </a>
                 </li>
                 <li>
-                  <a href="#academic-programs" className="hover:text-accent transition-colors drop-shadow-sm">
-                    Academic Programs
-                  </a>
-                </li>
-                <li>
-                  <a href="#cursillo" className="hover:text-accent transition-colors drop-shadow-sm">
+                  <a href="/cursillo" className="hover:text-accent transition-colors drop-shadow-sm">
                     Cursillo
                   </a>
                 </li>
                 <li>
-                  <a href="#event-rentals" className="hover:text-accent transition-colors drop-shadow-sm">
+                  <a href="/event-rentals" className="hover:text-accent transition-colors drop-shadow-sm">
                     Events Rentals
                   </a>
                 </li>
