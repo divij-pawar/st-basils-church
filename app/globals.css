@@ -1,0 +1,169 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Updated color tokens to reflect Orthodox Christian stained glass aesthetic */
+  --background: oklch(1 0 0); /* Pure White */
+  --foreground: oklch(0.2 0.05 240); /* Rich Navy Blue */
+  --card: oklch(0.98 0.02 60); /* Soft Cream */
+  --card-foreground: oklch(0.2 0.05 240); /* Rich Navy Blue */
+  --popover: oklch(1 0 0); /* Pure White */
+  --popover-foreground: oklch(0.2 0.05 240); /* Rich Navy Blue */
+  --primary: oklch(0.2 0.05 240); /* Rich Navy Blue */
+  --primary-foreground: oklch(1 0 0); /* Pure White */
+  --secondary: oklch(0.27 0.15 20); /* Dark Red */
+  --secondary-foreground: oklch(1 0 0); /* Pure White */
+  --muted: oklch(0.98 0.02 60); /* Soft Cream */
+  --muted-foreground: oklch(0.2 0.05 240); /* Rich Navy Blue */
+  --accent: oklch(0.85 0.15 85); /* Gold */
+  --accent-foreground: oklch(0.2 0.05 240); /* Rich Navy Blue */
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(0.2 0.05 240); /* Rich Navy Blue */
+  --input: oklch(0.98 0.02 60); /* Soft Cream */
+  --ring: oklch(0.2 0.05 240 / 0.5); /* Soft Navy Blue ring */
+  --chart-1: oklch(0.2 0.05 240); /* Rich Navy Blue */
+  --chart-2: oklch(0.27 0.15 20); /* Dark Red */
+  --chart-3: oklch(0.85 0.15 85); /* Gold */
+  --chart-4: oklch(0.98 0.02 60); /* Soft Cream */
+  --chart-5: oklch(1 0 0); /* Pure White */
+  --radius: 0.5rem;
+  --sidebar: oklch(0.98 0.02 60); /* Soft Cream */
+  --sidebar-foreground: oklch(0.2 0.05 240); /* Rich Navy Blue */
+  --sidebar-primary: oklch(0.2 0.05 240); /* Rich Navy Blue */
+  --sidebar-primary-foreground: oklch(1 0 0); /* Pure White */
+  --sidebar-accent: oklch(0.85 0.15 85); /* Gold */
+  --sidebar-accent-foreground: oklch(0.2 0.05 240); /* Rich Navy Blue */
+  --sidebar-border: oklch(0.2 0.05 240); /* Rich Navy Blue */
+  --sidebar-ring: oklch(0.2 0.05 240 / 0.5); /* Soft Navy Blue ring */
+}
+
+.dark {
+  /* Updated dark mode tokens to maintain Orthodox aesthetic */
+  --background: oklch(0.15 0.02 240); /* Dark Navy */
+  --foreground: oklch(0.98 0.02 60); /* Soft Cream */
+  --card: oklch(0.18 0.02 240); /* Slightly lighter navy */
+  --card-foreground: oklch(0.98 0.02 60); /* Soft Cream */
+  --popover: oklch(0.15 0.02 240); /* Dark Navy */
+  --popover-foreground: oklch(0.98 0.02 60); /* Soft Cream */
+  --primary: oklch(0.85 0.15 85); /* Gold */
+  --primary-foreground: oklch(0.2 0.05 240); /* Rich Navy Blue */
+  --secondary: oklch(0.35 0.15 20); /* Lighter Dark Red */
+  --secondary-foreground: oklch(0.98 0.02 60); /* Soft Cream */
+  --muted: oklch(0.25 0.02 240); /* Muted Navy */
+  --muted-foreground: oklch(0.7 0.02 60); /* Muted Cream */
+  --accent: oklch(0.85 0.15 85); /* Gold */
+  --accent-foreground: oklch(0.2 0.05 240); /* Rich Navy Blue */
+  --destructive: oklch(0.5 0.2 20); /* Dark Red */
+  --destructive-foreground: oklch(0.98 0.02 60); /* Soft Cream */
+  --border: oklch(0.25 0.02 240); /* Muted Navy */
+  --input: oklch(0.25 0.02 240); /* Muted Navy */
+  --ring: oklch(0.85 0.15 85 / 0.5); /* Soft Gold ring */
+  --sidebar: oklch(0.18 0.02 240); /* Slightly lighter navy */
+  --sidebar-foreground: oklch(0.98 0.02 60); /* Soft Cream */
+  --sidebar-primary: oklch(0.85 0.15 85); /* Gold */
+  --sidebar-primary-foreground: oklch(0.2 0.05 240); /* Rich Navy Blue */
+  --sidebar-accent: oklch(0.25 0.02 240); /* Muted Navy */
+  --sidebar-accent-foreground: oklch(0.98 0.02 60); /* Soft Cream */
+  --sidebar-border: oklch(0.25 0.02 240); /* Muted Navy */
+  --sidebar-ring: oklch(0.85 0.15 85 / 0.5); /* Soft Gold ring */
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* Added Orthodox stained glass background patterns */
+  .stained-glass-hero {
+    background-image: linear-gradient(rgba(0, 51, 102, 0.85), rgba(0, 51, 102, 0.75)),
+      url("/images/orthodox-stained-glass-hero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  .stained-glass-mission {
+    background-image: linear-gradient(rgba(254, 246, 228, 0.95), rgba(254, 246, 228, 0.9)),
+      url("/images/orthodox-stained-glass-mission.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  .stained-glass-footer {
+    background-image: linear-gradient(rgba(0, 51, 102, 0.9), rgba(0, 51, 102, 0.85)),
+      url("/images/orthodox-stained-glass-footer.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  /* Orthodox decorative elements */
+  .orthodox-border {
+    position: relative;
+  }
+
+  .orthodox-border::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      oklch(0.85 0.15 85) 25%,
+      oklch(0.27 0.15 20) 50%,
+      oklch(0.85 0.15 85) 75%,
+      transparent 100%
+    );
+  }
+}
