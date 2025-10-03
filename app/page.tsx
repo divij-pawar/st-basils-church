@@ -4,7 +4,7 @@ import { Cross, BookOpen, Users, Heart } from "lucide-react"
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background" id="home">
       {/* Header */}
       <header className="border-b border-border bg-card orthodox-border">
         <div className="container mx-auto px-4 py-4">
@@ -17,14 +17,26 @@ export default function HomePage() {
               </div>
             </div>
             <nav className="hidden md:flex items-center gap-6">
-              <a href="#about" className="text-foreground hover:text-accent transition-colors">
-                About
+              <a href="#home" className="text-foreground hover:text-accent transition-colors">
+                Home
               </a>
-              <a href="#programs" className="text-foreground hover:text-accent transition-colors">
-                Programs
+              <a href="#about-us" className="text-foreground hover:text-accent transition-colors">
+                About Us
               </a>
-              <a href="#events" className="text-foreground hover:text-accent transition-colors">
-                Events
+              <a href="#academic-programs" className="text-foreground hover:text-accent transition-colors">
+                Academic Programs
+              </a>
+              <a href="#cursillo" className="text-foreground hover:text-accent transition-colors">
+                Cursillo
+              </a>
+              <a href="#prayer-line" className="text-foreground hover:text-accent transition-colors">
+                Prayer Line
+              </a>
+              <a href="#calendar" className="text-foreground hover:text-accent transition-colors">
+                Calendar
+              </a>
+              <a href="#event-rentals" className="text-foreground hover:text-accent transition-colors">
+                Event Rentals
               </a>
               <a href="#news" className="text-foreground hover:text-accent transition-colors">
                 News
@@ -54,22 +66,34 @@ export default function HomePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="text-lg px-8 shadow-lg">
-                Learn About Our Programs
+                <a href="#academic-programs">Learn About Our Programs</a>
               </Button>
               <Button
                 variant="secondary"
                 size="lg"
                 className="text-lg px-8 bg-white/20 backdrop-blur-sm border-white/30 text-white hover:bg-white/30 shadow-lg"
               >
-                Visit Our Campus
+                <a href="#calendar">Visit Our Campus</a>
               </Button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Features Grid */}
-      <section className="py-16 stained-glass-mission">
+      {/* About Us Section */}
+      <section id="about-us" className="py-16 stained-glass-mission">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold text-foreground mb-4">About Us</h3>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
+              Saint Basil Seminary provides theological education and spiritual formation rooted in the Orthodox tradition.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Academic Programs / Features Grid */}
+      <section id="academic-programs" className="py-16 stained-glass-mission">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-foreground mb-4">Our Mission</h3>
@@ -130,6 +154,56 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Cursillo Section */}
+      <section id="cursillo" className="py-16 bg-card orthodox-border">
+        <div className="container mx-auto px-4 text-center">
+          <h3 className="text-3xl font-bold text-foreground mb-4">Cursillo</h3>
+          <p className="text-lg text-muted-foreground text-pretty">
+            Cursillo programs for deepening faith and community engagement in Orthodox Christianity.
+          </p>
+        </div>
+      </section>
+
+      {/* Prayer Line Section */}
+      <section id="prayer-line" className="py-16 stained-glass-mission">
+        <div className="container mx-auto px-4 text-center">
+          <h3 className="text-3xl font-bold text-foreground mb-4">Prayer Line</h3>
+          <p className="text-lg text-muted-foreground text-pretty">
+            Connect with our prayer team for spiritual support and intercessory prayer.
+          </p>
+        </div>
+      </section>
+
+      {/* Calendar Section */}
+      <section id="calendar" className="py-16 bg-card orthodox-border">
+        <div className="container mx-auto px-4 text-center">
+          <h3 className="text-3xl font-bold text-foreground mb-4">Calendar</h3>
+          <p className="text-lg text-muted-foreground text-pretty">
+            Stay up-to-date with our liturgical events, seminars, and special programs.
+          </p>
+        </div>
+      </section>
+
+      {/* Event Rentals Section */}
+      <section id="event-rentals" className="py-16 stained-glass-mission">
+        <div className="container mx-auto px-4 text-center">
+          <h3 className="text-3xl font-bold text-foreground mb-4">Event Rentals</h3>
+          <p className="text-lg text-muted-foreground text-pretty">
+            Explore our facilities available for hosting community and church events.
+          </p>
+        </div>
+      </section>
+
+      {/* News Section */}
+      <section id="news" className="py-16 bg-card orthodox-border">
+        <div className="container mx-auto px-4 text-center">
+          <h3 className="text-3xl font-bold text-foreground mb-4">News</h3>
+          <p className="text-lg text-muted-foreground text-pretty">
+            Latest updates, announcements, and articles from Saint Basil Seminary.
+          </p>
+        </div>
+      </section>
+
       {/* Call to Action */}
       <section className="py-16 bg-card orthodox-border">
         <div className="container mx-auto px-4 text-center">
@@ -151,6 +225,18 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Contact Section */}
+      <section id="contact" className="py-16 stained-glass-mission">
+        <div className="container mx-auto px-4 text-center">
+          <h3 className="text-3xl font-bold text-foreground mb-4">Contact</h3>
+          <p className="text-lg text-muted-foreground text-pretty">
+            123 Seminary Lane, Orthodox City, OC 12345 <br />
+            Phone: (555) 123-4567 <br />
+            Email: info@saintbasilseminary.edu
+          </p>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="stained-glass-footer text-white py-12">
         <div className="container mx-auto px-4">
@@ -169,23 +255,23 @@ export default function HomePage() {
               <h5 className="font-semibold mb-4 drop-shadow-md">Quick Links</h5>
               <ul className="space-y-2 text-white/80">
                 <li>
-                  <a href="#about" className="hover:text-accent transition-colors drop-shadow-sm">
+                  <a href="#about-us" className="hover:text-accent transition-colors drop-shadow-sm">
                     About Us
                   </a>
                 </li>
                 <li>
-                  <a href="#programs" className="hover:text-accent transition-colors drop-shadow-sm">
+                  <a href="#academic-programs" className="hover:text-accent transition-colors drop-shadow-sm">
                     Academic Programs
                   </a>
                 </li>
                 <li>
-                  <a href="#admissions" className="hover:text-accent transition-colors drop-shadow-sm">
-                    Admissions
+                  <a href="#cursillo" className="hover:text-accent transition-colors drop-shadow-sm">
+                    Cursillo
                   </a>
                 </li>
                 <li>
-                  <a href="#events" className="hover:text-accent transition-colors drop-shadow-sm">
-                    Events
+                  <a href="#event-rentals" className="hover:text-accent transition-colors drop-shadow-sm">
+                    Events Rentals
                   </a>
                 </li>
               </ul>
