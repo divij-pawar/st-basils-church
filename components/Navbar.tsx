@@ -26,13 +26,13 @@ export default function Navbar() {
             <a href="/programs" className="text-foreground hover:text-accent transition-colors">
               Academic Programs
             </a>
-            <a href="#cursillo" className="text-foreground hover:text-accent transition-colors">
+            <a href="/cursillo" className="text-foreground hover:text-accent transition-colors">
               Cursillo
             </a>
-            <a href="#prayer-line" className="text-foreground hover:text-accent transition-colors">
+            <a href="/prayer" className="text-foreground hover:text-accent transition-colors">
               Prayer Line
             </a>
-            <a href="#calendar" className="text-foreground hover:text-accent transition-colors">
+            <a href="/calendar" className="text-foreground hover:text-accent transition-colors">
               Calendar
             </a>
             <a href="/events" className="text-foreground hover:text-accent transition-colors">
