@@ -43,6 +43,7 @@ export default function RenewalApplicationPage() {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
+      <div className="pt-10"></div>
       <main>
         {/* Hero Section */}
         <section className="bg-gradient-to-b from-card to-background py-16">

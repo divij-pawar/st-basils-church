@@ -8,7 +8,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-background" id="home">
       <Navbar />
-
+      <div className="pt-10">
       {/* Hero Section */}
       <section className="relative py-20 stained-glass-hero">
         <div className="container mx-auto px-4 text-center">
@@ -37,6 +37,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      </div>
 
       {/* Academic Programs - Updated to new content */}
       <section id="academic-programs" className="py-16 stained-glass-mission">

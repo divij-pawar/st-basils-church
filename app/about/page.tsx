@@ -8,7 +8,7 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-
+      <div className="pt-10"></div>
       {/* Hero Section */}
       <section className="py-16 bg-gradient-to-b from-card to-background">
         <div className="container mx-auto px-4">

@@ -108,6 +108,7 @@ export default function RentalsPage() {
     <div className="min-h-screen bg-background">
       {/* Replaced Navigation with Navbar from the target project */}
       <Navbar />
+      <div className="pt-10"></div>
       <main>
         {/* Hero Section */}
         <section className="bg-gradient-to-b from-card to-background py-16">
